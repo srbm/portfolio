@@ -123,12 +123,21 @@ a {
     }
   }
   .bio {
-      p:nth-child(3) {
+      display: flex;
+      padding: 0 50px;
+      p:nth-child(2) {
+        text-align: left;
+        margin: 20px auto;
+        width: 45%;
+    }
+      div {
           text-align: left;
-          width: 45%;
-          margin: 20px auto;
+          p:nth-child(2) {
+              margin: 20px 0;
 
+          }
       }
+      
   }
   .examples {
     display: flex;

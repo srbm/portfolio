@@ -391,10 +391,17 @@ a:visited {
         .hero__headline h3 {
           font-size: 1.68em; } }
 
-.bio p:nth-child(3) {
-  text-align: left;
-  width: 45%;
-  margin: 20px auto; }
+.bio {
+  display: flex;
+  padding: 0 50px; }
+  .bio p:nth-child(2) {
+    text-align: left;
+    margin: 20px auto;
+    width: 45%; }
+  .bio div {
+    text-align: left; }
+    .bio div p:nth-child(2) {
+      margin: 20px 0; }
 
 .examples {
   display: flex;
