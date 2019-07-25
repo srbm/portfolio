@@ -1,24 +1,10 @@
+@import 'styles/keyframes';
+@import 'styles/footer';
+@import 'styles/palette';
+
 * {
     box-sizing: border-box;
-  }
-// Colors
-/* HSL */
-$background1: hsla(208%, 71%, 96%, 1);
-$text1: hsla(196%, 31%, 49%, 1);
-$text2: hsla(192%, 63%, 74%, 1);
-$green: hsla(99%, 53%, 55%, 1);
-$orange: hsla(28%, 71%, 57%, 1);
-
-/* RGB */
-$background1: rgba(237, 245, 252, 1);
-$text1: rgba(86, 142, 163, 1);
-$text2: rgba(146, 213, 230, 1);
-$green: rgba(123, 201, 80, 1);
-$orange: rgba(224, 142, 69, 1);
-$grey: #565F5D;
-$greyOpacity: rgba(86,95,93, .5);
-
-
+}
 body {
 font-family: 'Lato', sans-serif;
 font-size: 18px;
@@ -27,14 +13,193 @@ text-align: center;
 background-color: $background1;
 margin: 0;
 }
-section, footer {
-    padding: 1.5em;
-    min-height: 250px;
-}
-section:nth-child(3) {
-    background-color: $grey;
-}
-footer {
+a {
+    &:hover {text-decoration: none;}
+    &:visited {text-decoration: none; color: $text1;}
+  }
+  .initials {
+    h1 {
+      animation: moveBox 10s forwards;
+      position: relative;
+      line-height: .9;
+      border: 3px solid $text1;
+      width: 95px;
+      height: 95px;
+      padding: 10px;
+      float: right;
+      margin: 20px;
+      &::before {
+        display: none;
+      }
+    }
+    &__span {
+      opacity: 0;
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      &--S {
+        animation: ini1 10s forwards
+      }
+      &--R {
+        animation: ini2 10s forwards,
+      }
+      &--B {
+        animation: ini3 10s forwards,
+      }
+      &--M {
+        animation: ini4 10s forwards,
+      }
+    }
+  }
+  .hero {
+    clear: both;
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid $text1;
+    &__container {
+      position: relative;
+      padding-top: 51.88%;
+      width: 35%;
+    }
+    &__img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+      opacity: 0;
+      animation: picAnim1 1s 9.2s forwards;
+      display: inline;
+      overflow: hidden;
+      &--1, &--3 {
+        float: left;
+      }
+    }
+    &__headline {
+      width: 220px;
+      text-align: center;
+      display: inline-block;
+      position: relative;
+      margin: 0 auto;
+      opacity: 0;
+      animation: picAnim1 1s 9.2s forwards;
+      @media screen and ( min-width: 650px ) {
+        width: 325px;
+      }
+      @media screen and ( min-width: 800px ) {
+        width: 375px;
+      }
+      &--text {
+        margin-top: 0;
+        @media screen and ( min-width: 650px ) {
+          position: relative;
+          top: 130px;
+        }
+        @media screen and ( min-width: 800px ) {
+          position: relative;
+          top: 220px;
+        }
+      }
+      h1 {
+        font-size: 1.6em;
+        @media screen and ( min-width: 650px ) {
+          font-size: 2.4em;
+        }
+        @media screen and ( min-width: 800px ) {
+          font-size: 2.81em;
+        }
+      }
+      h3 {
+        font-size: 1.3em;
+        @media screen and ( min-width: 650px ) {
+          font-size: 1.55em;
+        }
+        @media screen and ( min-width: 800px ) {
+          font-size: 1.68em;
+        }
+      }
+    }
+  }
+  .bio {
+      p:nth-child(3) {
+          text-align: left;
+          width: 45%;
+          margin: 20px auto;
+
+      }
+  }
+  .examples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
     background-color: $grey;
     color: $text2;
-}
+    @media screen and (min-width: 650px) {
+      padding: 0 30px 30px;
+    }
+    &__title {
+      text-align: center;
+      flex-basis: 100%;
+  
+    }
+    &__card {
+      position: relative;
+      width: 45%;
+      margin: 35px auto 0;
+      height: 190px;
+      text-align: center;
+      border: 5px solid #92d5e6;
+      @media screen and ( min-width: 800px ) {
+        width: 31%;
+        margin: 35px 0 0;
+        height: 250px;
+      }
+      &--svg {
+        height: 70px;
+        width: 70px;
+        fill: #edf5fc;
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%);
+        @media screen and ( min-width: 800px ) {
+          height: 100px;
+          width: 100px;
+          fill: #edf5fc;
+          position: absolute;
+          top: 10%;
+        }
+      }
+      h3 {
+        color: $text1;
+        opacity: 1;
+        font-size: 1em;
+        margin: 5px;
+        
+      }
+      &--ge-app {
+        h3 {
+          @media screen and (min-width: 800px ) {
+            width: 220px;
+            margin: 5px auto;
+          }
+        }
+      }
+    }
+  }
+  .description {
+    color: $text1;
+    background: $background1;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 15px 0 0;
+    p {
+      text-align: center;
+      padding: 20px 10px;
+      margin: 0 auto;
+    }
+  }
