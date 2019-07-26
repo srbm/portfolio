@@ -295,30 +295,42 @@ body {
   background-color: #edf5fc;
   margin: 0; }
 
-a:hover {
+a {
   text-decoration: none; }
-a:visited {
-  text-decoration: none;
-  color: #568ea3; }
+  a:hover {
+    text-decoration: none; }
+  a:visited {
+    text-decoration: none;
+    color: #568ea3; }
 
 .initials h1 {
+  line-height: 0.65;
+  height: 65px;
+  width: 65px;
   position: relative;
-  line-height: .9;
   border: 3px solid #568ea3;
-  width: 95px;
-  height: 95px;
   float: right;
   margin: 20px;
   padding-top: 7px; }
+  @media (min-width: 992px) {
+    .initials h1 {
+      line-height: .9;
+      width: 95px;
+      height: 95px; } }
 .initials__span {
-  font-size: 1.3em; }
+  font-size: .75em; }
+  @media (min-width: 992px) {
+    .initials__span {
+      font-size: 1.3em; } }
 
 .hero {
   clear: both;
   display: flex;
   position: relative;
-  border-bottom: 2px solid #568ea3;
-  top: -40px; }
+  border-bottom: 2px solid #568ea3; }
+  @media (min-width: 992px) {
+    .hero {
+      top: -40px; } }
   .hero__container {
     position: relative;
     padding-top: 51.88%;
@@ -375,16 +387,30 @@ a:visited {
 
 .bio {
   display: flex;
-  padding: 0 50px; }
+  padding: 0 20px;
+  flex-direction: column; }
+  @media (min-width: 992px) {
+    .bio {
+      flex-direction: row;
+      padding: 0 50px; } }
   .bio p:nth-child(2) {
     text-align: left;
-    margin: 20px auto;
-    width: 45%; }
+    margin: 20px auto; }
+    @media (min-width: 992px) {
+      .bio p:nth-child(2) {
+        width: 45%; } }
   .bio div {
-    text-align: left; }
+    text-align: center; }
+    @media (min-width: 992px) {
+      .bio div {
+        text-align: left; } }
     .bio div p:nth-child(2) {
+      text-align: center;
       margin: 20px 0;
       width: 100%; }
+      @media (min-width: 992px) {
+        .bio div p:nth-child(2) {
+          text-align: left; } }
 
 .examples {
   display: flex;
@@ -399,15 +425,17 @@ a:visited {
   .examples__title {
     text-align: center;
     flex-basis: 100%; }
+    .examples__title h1 {
+      margin-bottom: 0; }
   .examples__card {
     position: relative;
-    width: 45%;
+    width: 90%;
     margin: 35px auto 0;
-    height: 190px;
     text-align: center;
     border: 5px solid #92d5e6;
     border-radius: 2px;
-    transition: .3s; }
+    transition: .3s;
+    padding: 10px 0 0; }
     @media screen and (min-width: 800px) {
       .examples__card {
         width: 31%;
@@ -418,17 +446,15 @@ a:visited {
     .examples__card--svg {
       height: 70px;
       width: 70px;
-      fill: #edf5fc;
-      position: absolute;
-      top: 52%;
-      left: 50%;
-      transform: translate(-50%); }
+      fill: #edf5fc; }
       @media screen and (min-width: 800px) {
         .examples__card--svg {
           height: 100px;
           width: 100px;
           fill: #edf5fc;
           position: absolute;
+          left: 50%;
+          transform: translate(-50%);
           top: 10%; } }
     .examples__card h3 {
       color: #568ea3;
@@ -439,14 +465,41 @@ a:visited {
       .examples__card--ge-app h3 {
         width: 220px;
         margin: 5px auto; } }
+  .examples__modal {
+    display: none;
+    background: #edf5fc;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 20px 0 0;
+    color: #568ea3; }
+    .examples__modal img {
+      width: 75vw;
+      border: 2px solid #565F5D;
+      border-radius: 4px; }
+    .examples__modal a {
+      color: #edf5fc;
+      background-color: #568ea3;
+      text-decoration: none;
+      padding: 15px 30px;
+      border: 2px solid #568ea3;
+      border-radius: 4px;
+      transition: .3s; }
+      .examples__modal a:hover {
+        border: 2px solid #e08e45; }
+    .examples__modal p {
+      text-align: left;
+      padding: 0 2em;
+      line-height: 1.2; }
 
 .description {
   color: #568ea3;
   background: #edf5fc;
-  position: absolute;
   bottom: 0px;
   width: 100%;
   padding: 15px 0 0; }
+  @media (min-width: 992px) {
+    .description {
+      position: absolute; } }
   .description p {
     text-align: center;
     padding: 20px 10px;

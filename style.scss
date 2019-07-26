@@ -1,6 +1,7 @@
 @import 'styles/keyframes';
 @import 'styles/footer';
 @import 'styles/palette';
+@import 'styles/mixins';
 
 * {
     box-sizing: border-box;
@@ -14,23 +15,31 @@ background-color: $background1;
 margin: 0;
 }
 a {
+    text-decoration: none;
     &:hover {text-decoration: none;}
     &:visited {text-decoration: none; color: $text1;}
   }
   .initials {
     h1 {
-    //   animation: moveBox 10s forwards;
-      position: relative;
-      line-height: .9;
-      border: 3px solid $text1;
-      width: 95px;
-      height: 95px;
-      float: right;
-      margin: 20px;
-      padding-top: 7px;
+        line-height: 0.65;
+        height: 65px;
+        width: 65px;
+        position: relative;
+        border: 3px solid $text1;
+        float: right;
+        margin: 20px;
+        padding-top: 7px;
+        @include laptop {
+            line-height: .9;
+            width: 95px;
+            height: 95px;
+        }
     }
     &__span {
-      font-size: 1.3em;
+        font-size: .75em;
+        @include laptop {
+            font-size: 1.3em;
+        }
     //   &--S {
     //     animation: ini1 10s forwards
     //   }
@@ -50,7 +59,9 @@ a {
     display: flex;
     position: relative;
     border-bottom: 2px solid $text1;
-    top: -40px;
+    @include laptop {
+        top: -40px;
+    }
     &__container {
       position: relative;
       padding-top: 51.88%;
@@ -117,18 +128,31 @@ a {
   }
   .bio {
       display: flex;
-      padding: 0 50px;
+      padding: 0 20px;
+      flex-direction: column;
+      @include laptop {
+        flex-direction: row;
+        padding: 0 50px;
+    }
       p:nth-child(2) {
         text-align: left;
         margin: 20px auto;
-        width: 45%;
+        @include laptop {
+            width: 45%;
+        }
     }
       div {
-          text-align: left;
+          text-align: center;
+          @include laptop {
+              text-align: left;
+          }
           p:nth-child(2) {
+              text-align: center;
               margin: 20px 0;
               width: 100%;
-
+              @include laptop {
+                text-align: left;
+            }
           }
       }
       
@@ -146,17 +170,19 @@ a {
     &__title {
       text-align: center;
       flex-basis: 100%;
-  
+      h1 {
+        margin-bottom: 0;  
+      }
     }
     &__card {
       position: relative;
-      width: 45%;
+      width: 90%;
       margin: 35px auto 0;
-      height: 190px;
       text-align: center;
       border: 5px solid #92d5e6;
       border-radius: 2px;
       transition: .3s;
+      padding: 10px 0 0;
       @media screen and ( min-width: 800px ) {
         width: 31%;
         margin: 35px 0 0;
@@ -169,15 +195,14 @@ a {
         height: 70px;
         width: 70px;
         fill: #edf5fc;
-        position: absolute;
-        top: 52%;
-        left: 50%;
-        transform: translate(-50%);
+        
         @media screen and ( min-width: 800px ) {
           height: 100px;
           width: 100px;
           fill: #edf5fc;
           position: absolute;
+          left: 50%;
+          transform: translate(-50%);
           top: 10%;
         }
       }
@@ -197,14 +222,46 @@ a {
         }
       }
     }
+    &__modal {
+        display: none;
+        background: rgb(237, 245, 252);
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+        margin: 20px 0 0;
+        color: $text1;
+        img {
+            width: 75vw;
+            border: 2px solid $grey;
+            border-radius: 4px;
+        }
+        a {
+            color: $background1;
+            background-color: $text1;
+            text-decoration: none;
+            padding: 15px 30px;
+            border: 2px solid $text1;
+            border-radius: 4px;
+            transition: .3s;
+            &:hover {
+                border: 2px solid $orange;
+            }
+        }
+        p {
+            text-align: left;
+            padding: 0 2em;
+            line-height: 1.2;
+        }
+    }
   }
   .description {
     color: $text1;
     background: $background1;
-    position: absolute;
     bottom: 0px;
     width: 100%;
     padding: 15px 0 0;
+    @include laptop {
+        position: absolute;
+    }
     p {
       text-align: center;
       padding: 20px 10px;
