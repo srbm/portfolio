@@ -229,10 +229,30 @@ a {
         box-shadow: 0 0 5px rgba(0, 0, 0, .5);
         margin: 20px 0 0;
         color: $text1;
+        h2 {
+            margin-left: 1em;
+            @include laptop {
+                margin-left: 2em;
+            }
+        }
+        span {
+            float: right;
+            padding: 5px;
+            line-height: 1;
+            border-radius: 2px;
+            box-shadow: 0 0 3px $grey;
+            width: 35px;
+            height: 32px;
+            margin: -15px 5px 0;
+            @include laptop {
+                margin-right: 2em;
+            }
+        }
         img {
             width: 75vw;
             border: 2px solid $grey;
             border-radius: 4px;
+            margin-bottom: 20px;
         }
         a {
             color: $background1;
@@ -242,6 +262,9 @@ a {
             border: 2px solid $text1;
             border-radius: 4px;
             transition: .3s;
+            display: block;
+            max-width: 225px;
+            margin: 0 auto;
             &:hover {
                 border: 2px solid $orange;
             }

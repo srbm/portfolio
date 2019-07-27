@@ -1,9 +1,18 @@
 'use strict';
-function toggleModal() {
-    console.log('loaded');
-    $('.examples__card--longhorn').on('click', e => {
-        $('.examples__modal--longhorn').slideToggle('200ms');
+function openModal() {
+    $('.examples__card--longhorn').on('click', () => {
+        $('.examples__modal--longhorn').slideDown('200ms');
     });
 }
+function closeModal() {
 
-$(toggleModal);
+    console.log('loaded');
+    $('#modal-longhorn').on('click', () => {
+        $('#modal-longhorn').slideUp('100ms');
+    });
+}
+function watchFunctions() {
+    openModal();
+    closeModal();
+}
+$(watchFunctions);
