@@ -438,8 +438,9 @@ a {
     padding: 10px 0 0; }
     @media screen and (min-width: 800px) {
       .examples__card {
+        flex-grow: 2;
         width: 31%;
-        margin: 35px 0 0;
+        margin: 35px 10px 0;
         height: 250px; } }
     .examples__card:hover {
       border: 5px solid #7bc950; }
@@ -466,11 +467,11 @@ a {
         width: 220px;
         margin: 5px auto; } }
   .examples__modal {
-    display: none;
     background: #edf5fc;
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     margin: 20px 0 0;
+    padding: 20px 0;
     color: #568ea3; }
     .examples__modal h2 {
       margin-left: 1em; }
@@ -496,6 +497,9 @@ a {
       border: 2px solid #565F5D;
       border-radius: 4px;
       margin-bottom: 20px; }
+      @media (min-width: 992px) {
+        .examples__modal img {
+          width: 50vw; } }
     .examples__modal a {
       color: #edf5fc;
       background-color: #568ea3;
@@ -513,6 +517,9 @@ a {
       text-align: left;
       padding: 0 2em;
       line-height: 1.2; }
+      @media (min-width: 992px) {
+        .examples__modal p {
+          width: 50vw; } }
 
 .description {
   color: #568ea3;
@@ -527,5 +534,8 @@ a {
     text-align: center;
     padding: 20px 10px;
     margin: 0 auto; }
+
+#big-screen-modal1 {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

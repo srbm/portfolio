@@ -184,8 +184,9 @@ a {
       transition: .3s;
       padding: 10px 0 0;
       @media screen and ( min-width: 800px ) {
+        flex-grow: 2;
         width: 31%;
-        margin: 35px 0 0;
+        margin: 35px 10px 0;
         height: 250px;
       }
       &:hover {
@@ -223,11 +224,11 @@ a {
       }
     }
     &__modal {
-        display: none;
         background: rgb(237, 245, 252);
         border-radius: 4px;
         box-shadow: 0 0 5px rgba(0, 0, 0, .5);
         margin: 20px 0 0;
+        padding: 20px 0;
         color: $text1;
         h2 {
             margin-left: 1em;
@@ -256,6 +257,9 @@ a {
             border: 2px solid $grey;
             border-radius: 4px;
             margin-bottom: 20px;
+            @include laptop {
+                width: 50vw;
+            }
         }
         a {
             color: $background1;
@@ -276,6 +280,9 @@ a {
             text-align: left;
             padding: 0 2em;
             line-height: 1.2;
+            @include laptop {
+                width: 50vw;
+            }
         }
     }
   }
@@ -293,4 +300,8 @@ a {
       padding: 20px 10px;
       margin: 0 auto;
     }
+  }
+
+  #big-screen-modal1 {
+      margin: 0 auto;
   }
