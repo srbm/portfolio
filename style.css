@@ -519,7 +519,8 @@ a {
       line-height: 1.2; }
       @media (min-width: 992px) {
         .examples__modal p {
-          width: 50vw; } }
+          width: 53vw;
+          margin: 20px auto; } }
 
 .description {
   color: #568ea3;

@@ -281,7 +281,8 @@ a {
             padding: 0 2em;
             line-height: 1.2;
             @include laptop {
-                width: 50vw;
+                width: 53vw;
+                margin: 20px auto
             }
         }
     }
