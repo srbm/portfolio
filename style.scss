@@ -245,7 +245,10 @@ a {
             height: 32px;
             margin: -15px 5px 0;
             @include laptop {
-                margin-right: 2em;
+                margin: 0 2em 0 0;
+            }
+            &:hover {
+                cursor: pointer;
             }
         }
         img {

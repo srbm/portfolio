@@ -488,7 +488,9 @@ a {
       margin: -15px 5px 0; }
       @media (min-width: 992px) {
         .examples__modal span {
-          margin-right: 2em; } }
+          margin: 0 2em 0 0; } }
+      .examples__modal span:hover {
+        cursor: pointer; }
     .examples__modal img {
       width: 75vw;
       border: 2px solid #565F5D;
