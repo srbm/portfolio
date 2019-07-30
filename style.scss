@@ -157,11 +157,14 @@ a {
       }
       
   }
+  figure {
+      margin: 0 auto;
+  }
   .examples {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 10px;
     background-color: $grey;
     color: $text2;
     @media screen and (min-width: 650px) {
@@ -176,15 +179,15 @@ a {
     }
     &__card {
       position: relative;
+      flex-grow: 2;
       width: 90%;
-      margin: 35px auto 0;
+      margin: 35px 0 0;
       text-align: center;
       border: 5px solid #92d5e6;
       border-radius: 2px;
       transition: .3s;
       padding: 10px 0 0;
       @media screen and ( min-width: 800px ) {
-        flex-grow: 2;
         width: 31%;
         margin: 35px 10px 0;
         height: 250px;
@@ -231,22 +234,24 @@ a {
         padding: 20px 0;
         color: $text1;
         h2 {
-            margin-left: 1em;
+            position: relative;
             @include laptop {
                 margin-left: 2em;
             }
         }
         span {
-            float: right;
             padding: 5px;
             line-height: 1;
             border-radius: 2px;
             box-shadow: 0 0 3px $grey;
             width: 35px;
             height: 32px;
-            margin: -15px 5px 0;
+            position: absolute;
+            top: -35px;
+            right: 10px;
             @include laptop {
-                margin: 0 2em 0 0;
+                top: -25px;
+                right: 20px;
             }
             &:hover {
                 cursor: pointer;
@@ -271,7 +276,7 @@ a {
             transition: .3s;
             display: block;
             max-width: 225px;
-            margin: 0 auto;
+            margin: 15px auto;
             &:hover {
                 border: 2px solid $orange;
             }

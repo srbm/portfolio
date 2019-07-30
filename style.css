@@ -412,11 +412,14 @@ a {
         .bio div p:nth-child(2) {
           text-align: left; } }
 
+figure {
+  margin: 0 auto; }
+
 .examples {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 10px;
   background-color: #565F5D;
   color: #92d5e6; }
   @media screen and (min-width: 650px) {
@@ -429,8 +432,9 @@ a {
       margin-bottom: 0; }
   .examples__card {
     position: relative;
+    flex-grow: 2;
     width: 90%;
-    margin: 35px auto 0;
+    margin: 35px 0 0;
     text-align: center;
     border: 5px solid #92d5e6;
     border-radius: 2px;
@@ -438,7 +442,6 @@ a {
     padding: 10px 0 0; }
     @media screen and (min-width: 800px) {
       .examples__card {
-        flex-grow: 2;
         width: 31%;
         margin: 35px 10px 0;
         height: 250px; } }
@@ -474,22 +477,24 @@ a {
     padding: 20px 0;
     color: #568ea3; }
     .examples__modal h2 {
-      margin-left: 1em; }
+      position: relative; }
       @media (min-width: 992px) {
         .examples__modal h2 {
           margin-left: 2em; } }
     .examples__modal span {
-      float: right;
       padding: 5px;
       line-height: 1;
       border-radius: 2px;
       box-shadow: 0 0 3px #565F5D;
       width: 35px;
       height: 32px;
-      margin: -15px 5px 0; }
+      position: absolute;
+      top: -35px;
+      right: 10px; }
       @media (min-width: 992px) {
         .examples__modal span {
-          margin: 0 2em 0 0; } }
+          top: -25px;
+          right: 20px; } }
       .examples__modal span:hover {
         cursor: pointer; }
     .examples__modal img {
@@ -510,7 +515,7 @@ a {
       transition: .3s;
       display: block;
       max-width: 225px;
-      margin: 0 auto; }
+      margin: 15px auto; }
       .examples__modal a:hover {
         border: 2px solid #e08e45; }
     .examples__modal p {

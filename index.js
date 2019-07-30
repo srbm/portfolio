@@ -32,31 +32,32 @@ function openModal() {
         </figure>
         <h5>React, JavaScript, APIs, Sass</h5>
         <a class="link-button" href="http://srbm.github.io/pdx-adventure-weather">See it live</a>
+        <a class="link-button" href="http://github.com/srbm/pdx-adventure-weather">See the repo</a>
         <p>I wanted to create a place for Portlanders to see what the weather is like in places outisde of town where they might going adventuring. This is a single page app the gives current temperature and a radar map of the area you click on. I used React and API functionality to pull this together.</p>
         </div>`,
     ];
     let width = parseInt(window.innerWidth)
     $('.examples__card').on('click', e => {
         const target = e.currentTarget;
-        let i = modalPicker(target, modalHTML);
+        let i = projectPicker(target, modalHTML);
         if (width < 996) {
             if ( $(target).next().html() ) {
                 $(target).next().slideUp('50ms').empty();
-                $(target).next().append(modalHTML[0]).slideDown('200ms');
+                $(target).next().append(modalHTML[i]).slideDown('200ms');
             } else {
-                $(target).next().append(modalHTML[0]).slideDown('200ms');
+                $(target).next().append(modalHTML[i]).slideDown('200ms');
             }
         } else {
             if ( $('#big-screen-modal1').html() ) {
                 $('#big-screen-modal1').slideUp('50ms').empty();
-                $('#big-screen-modal1').append(modalHTML[i]).slideDown('200ms');
+                $('#big-screen-modal1').append(modalHTML[i]).slideDown('200ms').scrollIntoView();
             } else {
-                $('#big-screen-modal1').append(modalHTML[i]).slideDown('200ms');
+                $('#big-screen-modal1').append(modalHTML[i]).slideDown('200ms').scrollIntoView();
             }
         }
     });
 }
-function modalPicker(target, arr) {
+function projectPicker(target, arr) {
     console.log('picking');
     if ( $(target).next().is('#longhorn-modal')) {
         console.log('longhorn');
