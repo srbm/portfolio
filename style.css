@@ -428,7 +428,8 @@ figure {
   .examples__title {
     text-align: center;
     flex-basis: 100%; }
-    .examples__title h1 {
+    .examples__title h2 {
+      font-size: 2.2em;
       margin-bottom: 0; }
   .examples__card {
     position: relative;
