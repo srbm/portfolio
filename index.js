@@ -23,16 +23,28 @@ function openModal() {
 }
 function projectPicker(target) {
     console.log('picking');
-    if ( $(target).next().is('#longhorn-modal')) {
-        console.log('longhorn');
-        return $('#examples__modal--longhorn');
-    } else if ( $(target).next().is('#cloud-cap-modal') ) {
-        console.log('cloud cap');
-        return $('#examples__modal--cloud');
-    } else {
-        console.log('weather');
-        return $('#examples__modal--weather');
-    }
+    const projectName = $(target).data('modal-name');
+    console.log($('.hidden-modal-content div'));
+    let modal = null;
+    $('.hidden-modal-content div').each(
+        () => {
+            console.log($(this));
+            if ( $(this).data('modal-name') === projectName ) {
+                modal = $(this).clone();
+            }
+        });
+    return modal;
+    
+    // if ( $(target).next().is('#longhorn-modal')) {
+    //     console.log('longhorn');
+    //     return $('#examples__modal--longhorn').clone();
+    // } else if ( $(target).next().is('#cloud-cap-modal') ) {
+    //     console.log('cloud cap');
+    //     return $('#examples__modal--cloud').clone();
+    // } else {
+    //     console.log('weather');
+    //     return $('#examples__modal--weather').clone();
+    // }
 }
 function closeModal() {
     $('.modal-cont').on('click', e => {

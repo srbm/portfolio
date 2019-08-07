@@ -316,7 +316,8 @@ a {
     .initials h1 {
       line-height: .9;
       width: 95px;
-      height: 95px; } }
+      height: 95px;
+      padding-top: 4px; } }
 .initials__span {
   font-size: .75em; }
   @media (min-width: 992px) {
