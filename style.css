@@ -311,7 +311,7 @@ a {
   border: 3px solid #568ea3;
   float: right;
   margin: 20px;
-  padding-top: 7px; }
+  padding-top: 3px; }
   @media (min-width: 992px) {
     .initials h1 {
       line-height: .9;
