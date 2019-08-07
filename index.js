@@ -27,10 +27,9 @@ function projectPicker(target) {
     console.log($('.hidden-modal-content div'));
     let modal = null;
     $('.hidden-modal-content div').each(
-        () => {
-            console.log($(this));
-            if ( $(this).data('modal-name') === projectName ) {
-                modal = $(this).clone();
+        (index, ele) => {
+            if ( $(ele).data('modal-name') === projectName ) {
+                modal = $(ele).clone();
             }
         });
     return modal;
