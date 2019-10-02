@@ -190,8 +190,8 @@ a {
       transition: .3s;
       padding: 10px 0 0;
       @media screen and ( min-width: 800px ) {
-        width: 31%;
-        margin: 35px 10px 0;
+        width: 37%;
+        margin: 35px 50px 0;
         height: 250px;
       }
       &:hover {
@@ -209,7 +209,7 @@ a {
           position: absolute;
           left: 50%;
           transform: translate(-50%);
-          top: 10%;
+          top: 7%;
         }
       }
       h3 {
@@ -243,7 +243,8 @@ a {
         }
         span {
             padding: 5px;
-            line-height: 1;
+            line-height: .9;
+            font-size: 25px;
             border-radius: 2px;
             box-shadow: 0 0 3px $grey;
             width: 35px;
