@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
 import './styles/reset.css';
+import StarryBackground from './components/StarryBackground';
+
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ position: 'relative', minBlockSize: '100vh' }}>
+      <StarryBackground />
       <header>
         <h1>Shawn Meyer</h1>
         <p>Web Developer</p>
