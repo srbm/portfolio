@@ -1,0 +1,15 @@
+@media screen and (min-width: 768px) {
+    .contact-buttons {
+        display: flex;
+        flex-direction: row;
+
+        gap: 0.5em;
+        width: 100%;
+    }
+
+
+    .contact-section h2 {
+
+        margin-bottom: 1rem;
+    }
+}

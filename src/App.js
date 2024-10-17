@@ -1,39 +1,46 @@
 import React from 'react';
-import './App.css';
 import './styles/reset.css';
+import './styles/vars.css';
+import './styles/ui/buttons.css';
+import './App.css';
 import StarryBackground from './components/StarryBackground';
+import Layout from './components/Layout';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App" style={{ position: 'relative', minBlockSize: '100vh' }}>
       <StarryBackground />
-      <header>
-        <h1>Shawn Meyer</h1>
-        <p>Web Developer</p>
-      </header>
+      
       <main>
-        <section id="about">
-          <h2>About Me</h2>
-          <p>I am a web developer with a passion for creating beautiful and functional websites.</p>
-        </section>
-        <section id="projects">
-          <h2>Projects</h2>
-          <ul>
-            <li>Nike SB</li>
-            <li>The Listening Sessions</li>
-            <li>Lam Partners</li>
-          </ul>
-        </section>
-        <section id="contact">
-          <h2>Contact</h2>
-          <p><a href="mailto:shawnrbm@gmail.com">shawnrbm@gmail.com</a></p>
-          <p><a href="https://github.com/srbm">GitHub</a></p>
-          <p><a href="https://www.linkedin.com/in/shawnrbmeyer/">LinkedIn</a></p>
-        </section>
+        <Layout>
+
+          <div>
+            <Header />
+          </div>
+
+          <div>
+            <section id="about">
+              <h2>About Me</h2>
+              <p>I am an adventurer and creator, always looking for a challenge, whether it's a coding project, woodworking build, or a new gardening technique. Colleagues say that I'm even-keeled and an enjoyable teammate to have around.</p>
+            </section>
+            <section id="projects">
+              <h2>Projects</h2>
+              <ul>
+                <li>Nike SB</li>
+                <li>The Listening Sessions</li>
+                <li>Lam Partners</li>
+              </ul>
+            </section>
+          </div>
+
+        </Layout>
+
+        <footer>
+          <p>&copy; {new Date().getFullYear()} Shawn Meyer.</p>
+        </footer>
       </main>
-      <footer>
-        <p>&copy; {new Date().getFullYear()} Shawn Meyer. All rights reserved.</p>
-      </footer>
+      
     </div>
   );
 }

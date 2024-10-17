@@ -18,6 +18,7 @@ const BubbleStar = ({ top, left, canShoot, shootDirection }) => {
   }, [canShoot]);
 
   const starStyle = {
+    borderRadius: '50%',
     position: 'absolute',
     top: `${top}%`,
     left: `${left}%`,

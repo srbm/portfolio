@@ -1,0 +1,23 @@
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3em;
+}
+
+@media screen and (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .layout > *:first-child {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .layout > *:last-child {
+        overflow-y: auto;
+    }
+}

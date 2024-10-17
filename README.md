@@ -1,4 +1,4 @@
-This is a simple portfolio website for Shawn Meyer, a web developer.
+This is the portfolio website for Shawn Meyer, a web developer.
 
 ## Technologies Used
 

@@ -15,7 +15,7 @@ const StarryBackground = () => {
   }, []);
 
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '100vh' }}>
+    <div style={{ position: 'absolute', width: '100vw', height: '100vh', left: 0 }}>
       {stars.map((star, index) => (
         <Star
           key={index}
