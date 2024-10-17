@@ -1,0 +1,14 @@
+.experience {
+    display: grid;
+    row-gap: var(--space-l-xl);
+}
+
+@media screen and (min-width: 1024px) {
+    .experience {
+        .h2 {
+            height: 0px;
+            width: 0px;
+            visibility: hidden;
+        }
+    }
+}

@@ -5,7 +5,7 @@ import StarryBackground from './components/StarryBackground';
 import Layout from './components/Layout';
 import Header from './components/Header';
 import About from './components/About';
-
+import Experience from './components/Experience';
 function App() {
   return (
     <div className="App" style={{ position: 'relative', minBlockSize: '100vh' }}>
@@ -16,6 +16,7 @@ function App() {
 
           <main>
             <About />
+            <Experience />
             <section id="projects">
               <h2>Projects</h2>
               <ul>

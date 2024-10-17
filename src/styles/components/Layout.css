@@ -6,7 +6,7 @@
 
 @media screen and (min-width: 1024px) {
     .layout {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 40% 60%;
     }
 
     .layout > *:first-child {
