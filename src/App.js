@@ -1,29 +1,21 @@
 import React from 'react';
-import './styles/reset.css';
-import './styles/vars.css';
-import './styles/ui/buttons.css';
+import './styles/index.css';
 import './App.css';
 import StarryBackground from './components/StarryBackground';
 import Layout from './components/Layout';
 import Header from './components/Header';
+import About from './components/About';
 
 function App() {
   return (
     <div className="App" style={{ position: 'relative', minBlockSize: '100vh' }}>
       <StarryBackground />
       
-      <main>
         <Layout>
+          <Header />
 
-          <div>
-            <Header />
-          </div>
-
-          <div>
-            <section id="about">
-              <h2>About Me</h2>
-              <p>I am an adventurer and creator, always looking for a challenge, whether it's a coding project, woodworking build, or a new gardening technique. Colleagues say that I'm even-keeled and an enjoyable teammate to have around.</p>
-            </section>
+          <main>
+            <About />
             <section id="projects">
               <h2>Projects</h2>
               <ul>
@@ -32,14 +24,8 @@ function App() {
                 <li>Lam Partners</li>
               </ul>
             </section>
-          </div>
-
+          </main>
         </Layout>
-
-        <footer>
-          <p>&copy; {new Date().getFullYear()} Shawn Meyer.</p>
-        </footer>
-      </main>
       
     </div>
   );

@@ -10,8 +10,6 @@
     }
 
     .layout > *:first-child {
-        display: grid;
-        grid-template-rows: 1fr auto;
         height: 100vh;
         position: sticky;
         top: 0;

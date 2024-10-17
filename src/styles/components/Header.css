@@ -1,4 +1,4 @@
-header {
+.header {
     display: grid;
     grid-template-rows: auto auto 1fr;
     grid-gap: var(--space-2xl);
@@ -8,15 +8,12 @@ header {
         display: grid;
         grid-gap: var(--space-3xs-s);
     }
-    h1 {
-        font-size: 3rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
     p {
-        font-size: 1.1rem;
         max-width: 330px;
+    }
+    .nav ul {
+        display: grid;
+        grid-gap: var(--space-2xs);
     }
     .contact-section {
         align-self: end;
