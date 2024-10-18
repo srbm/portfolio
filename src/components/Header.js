@@ -12,15 +12,9 @@ const Header = () => {
             </div>
             <nav aria-label="Main Navigation" className='nav'>
                 <ul>
-                    <li>
-                        <NavLink href='#about' text='About' />
-                    </li>
-                    <li>
-                        <NavLink href='#experience' text='Experience' />
-                    </li>
-                    <li>
-                        <NavLink href='#projects' text='Projects' />
-                    </li>
+                    <li><NavLink href='#about' text='About' /></li>
+                    <li><NavLink href='#experience' text='Experience' /></li>
+                    <li><NavLink href='#projects' text='Work Samples' /></li>
                 </ul>
             </nav>
             <ContactSection />

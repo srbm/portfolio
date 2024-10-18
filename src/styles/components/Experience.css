@@ -1,6 +1,6 @@
 .experience {
     display: grid;
-    row-gap: var(--space-l-xl);
+    row-gap: var(--space-s-m);
 }
 
 @media screen and (min-width: 1024px) {

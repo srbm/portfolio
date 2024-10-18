@@ -2,11 +2,13 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 3em;
+    position: relative;
+    z-index: 1;
 }
 
 @media screen and (min-width: 1024px) {
     .layout {
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 2fr 3fr;
     }
 
     .layout > *:first-child {

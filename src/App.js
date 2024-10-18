@@ -23,6 +23,10 @@ function App() {
                 <li>Nike SB</li>
                 <li>The Listening Sessions</li>
                 <li>Lam Partners</li>
+                <li>Malarkey Sustainability Calculator</li>
+                <li>Disney Impact</li>
+                <li>Richardson Sports PDP</li>
+                <li>Procurement</li>
               </ul>
             </section>
           </main>

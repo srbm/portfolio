@@ -112,10 +112,15 @@
     font-size: var(--step-3);
 }
 
-.p, a {
+.p {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: var(--step-0);
     opacity: 0.6;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: var(--step--2);
 }

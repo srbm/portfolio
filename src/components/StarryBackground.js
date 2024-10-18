@@ -9,13 +9,13 @@ const StarryBackground = () => {
       top: Math.random() * 100,
       left: Math.random() * 100,
       canShoot: Math.random() > 0.5,
-      shootDirection: Math.random() * 360 // Random angle in degrees
+      shootDirection: Math.random() * 360
     }));
     setStars(newStars);
   }, []);
 
   return (
-    <div style={{ position: 'absolute', width: '100vw', height: '100vh', left: 0 }}>
+    <div style={{ position: 'absolute', width: '100%', minHeight: '100vh', height: '100%', left: 0, top: 0, overflow: 'hidden' }}>
       {stars.map((star, index) => (
         <Star
           key={index}

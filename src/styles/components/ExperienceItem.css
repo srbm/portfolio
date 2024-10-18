@@ -1,10 +1,14 @@
 .experience-item {
-    border-radius: 6px;
+    border-radius: 8px;
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 1fr 2fr;
     gap: var(--space-xs-s);
     padding: var(--space-s);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    
+    &.dimmed {
+      opacity: 0.6;
+    }
     &:hover {
         background-color: var(--color-navy-light);
 
@@ -24,18 +28,16 @@
     }
 
     .content {
+        display: grid;
         grid-column: 2 / 3;
-    }
 
-    .header {
-        margin-bottom: var(--space-2xs);
     }
 
     .title {
         display: flex;
         align-items: center;
         gap: var(--space-3xs);
-        margin-bottom: var(--space-3xs);
+        margin-bottom: var(--space-2xs);
         transition: color 0.3s ease;
 
         .external-arrow svg{
@@ -50,14 +52,35 @@
     }
 
     .description {
-        margin-bottom: var(--space-s);
+        margin-bottom: var(--space-m);
     }
 
+    .links {
+        cursor: default;
+        margin-bottom: var(--space-xs);
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3xs);
+        transition: color 0.3s ease;
+        svg {
+            height: 16px;
+            width: 16px;
+        }
+        &:hover {
+            color: var(--color-aqua);
+        }
+    }
 
     .skills {
         display: flex;
         flex-wrap: wrap;
         gap: var(--space-3xs);
+    }
+    .skill-pill {
+        cursor: pointer;
     }
 }
 
