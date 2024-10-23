@@ -1,13 +1,14 @@
 .layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3em;
+    gap: var(--space-s);
     position: relative;
     z-index: 1;
 }
 
 @media screen and (min-width: 1024px) {
     .layout {
+        grid-gap: var(--space-xl);
         grid-template-columns: 2fr 3fr;
     }
 
