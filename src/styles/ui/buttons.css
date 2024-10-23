@@ -23,7 +23,7 @@
             width: 50px;
         }
     }
-    &:active, &:focus &.active {
+    &:active, &:focus, &.active {
         opacity: 1;
         &:before {
             width: 50px;

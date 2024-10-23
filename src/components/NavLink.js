@@ -1,27 +1,55 @@
 import '../styles/ui/buttons.css';
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+
+// Create a context for managing the active link with a default value
+const ActiveLinkContext = React.createContext({
+  activeHref: '',
+  setActiveHref: () => {},
+});
+
+// Create a provider component to wrap around the navigation
+export const ActiveLinkProvider = ({ children }) => {
+  const [activeHref, setActiveHref] = useState('');
+  return (
+    <ActiveLinkContext.Provider value={{ activeHref, setActiveHref }}>
+      {children}
+    </ActiveLinkContext.Provider>
+  );
+};
 
 const NavLink = ({ href, text }) => {
+    const { activeHref, setActiveHref } = useContext(ActiveLinkContext);
+    const [isVisible, setIsVisible] = useState(false);
+
     const handleClick = (e) => {
         e.preventDefault();
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
+            setActiveHref(href);
         }
     };
-    const [isActive, setIsActive] = React.useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
 
+        if (!targetElement) {
+            console.warn(`Element with id ${targetId} not found`);
+            return;
+        }
+
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsActive(entry.isIntersecting);
+                console.log(`Observing ${targetId}:`, entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    setActiveHref(href);
+                }
+                setIsVisible(entry.isIntersecting);
             },
             { 
-                rootMargin: '200px',
+                rootMargin: '-120px 0px -100% 0px',
                 threshold: 0
             }
         );
@@ -35,8 +63,9 @@ const NavLink = ({ href, text }) => {
                 observer.unobserve(targetElement);
             }
         };
-    }, [href]);
+    }, [href, setActiveHref]);
 
+    const isActive = activeHref === href;
 
     return (
         <a href={href} className={`nav-link ${isActive ? 'active' : ''}`} onClick={handleClick}>{text}</a>
