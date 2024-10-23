@@ -16,7 +16,7 @@ const Header = () => {
                     <ul>
                         <li><NavLink href='#about' text='About' /></li>
                         <li><NavLink href='#experience' text='Experience' /></li>
-                        <li><NavLink href='#projects' text='Work Samples' /></li>
+                        <li><NavLink href='#work-samples' text='Work Samples' /></li>
                     </ul>
                 </nav>
             </ActiveLinkProvider>

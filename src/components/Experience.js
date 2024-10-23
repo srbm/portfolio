@@ -10,7 +10,7 @@ const experienceData = [
     description: 'Developed websites for global brands such as Nike, Jordan, Disney, and Adobe using a component-driven approach (React, Remix, JavaScript, PHP). Collaborated effectively with team members to deliver complex projects on time and within budget.',
     links: [
       { text: 'NikeSB YBOS', url: 'https://ybos.nikesb.com/ybos-running' },
-      { text: 'The Listening Sessions', url: 'https://acalltolisten.com' },
+      { text: 'The Listening Sessions', url: 'https://acalltolisten.org' },
       { text: 'Disney Impact', url: 'https://impact.disney.com' }
     ],
     skills: ['React', 'Wordpress', 'JavaScript', 'PHP', 'HTML', 'CSS', 'Figma']

@@ -6,7 +6,7 @@ import Layout from './components/Layout';
 import Header from './components/Header';
 import About from './components/About';
 import Experience from './components/Experience';
-import Projects from './components/Projects'; 
+import WorkSamples from './components/WorkSamples'; 
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <main>
             <About />
             <Experience />
-            <Projects />
+            <WorkSamples />
           </main>
         </Layout>
       

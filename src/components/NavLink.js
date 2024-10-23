@@ -26,7 +26,11 @@ const NavLink = ({ href, text }) => {
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 120;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
             setActiveHref(href);
         }
     };
@@ -35,14 +39,8 @@ const NavLink = ({ href, text }) => {
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
 
-        if (!targetElement) {
-            console.warn(`Element with id ${targetId} not found`);
-            return;
-        }
-
         const observer = new IntersectionObserver(
             ([entry]) => {
-                console.log(`Observing ${targetId}:`, entry.isIntersecting);
                 if (entry.isIntersecting) {
                     setActiveHref(href);
                 }

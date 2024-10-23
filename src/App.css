@@ -11,10 +11,10 @@ body {
   max-width: 1500px;
   padding: 0 20px;
   text-align: left;
-  
+
   main {
     display: grid;
-    grid-gap: var(--space-l);
+    grid-gap: var(--space-3xl);
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     padding: var(--header-padding) 0;
