@@ -1,0 +1,33 @@
+header.header {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: var(--space-m);
+    padding: var(--header-padding) 0;
+    
+    @media screen and (min-width: 768px) {
+        grid-gap: var(--space-2xl);
+        grid-template-rows: auto auto 1fr;
+    }
+    .header-content {
+        display: grid;
+        grid-gap: var(--space-3xs-s);
+    }
+    p {
+        max-width: 330px;
+    }
+    .nav {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+
+        ul {
+            display: grid;
+            grid-gap: var(--space-2xs);
+        }
+    }
+    .contact-section {
+        align-self: end;
+    }
+}

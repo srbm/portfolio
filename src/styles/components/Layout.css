@@ -1,0 +1,24 @@
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-s);
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+    .layout {
+        grid-gap: var(--space-xl);
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .layout > *:first-child {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .layout > *:last-child {
+        overflow-y: auto;
+    }
+}

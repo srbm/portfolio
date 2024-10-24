@@ -1,0 +1,68 @@
+.work-sample {
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-m);
+    padding: var(--space-s);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+
+    &.dimmed {
+        opacity: 0.6;
+    }
+
+    &:hover {
+        background-color: var(--color-navy-light);
+
+        .title, .external-arrow {
+            color: var(--color-aqua);
+        }
+
+        .external-arrow svg{
+            fill: var(--color-aqua);
+            transform: translate(2px, -2px);
+        }
+        .image {
+            border: 2px solid var(--color-aqua-darkest)
+        }
+    }
+
+
+    .image {
+        border: 2px solid var(--color-navy);
+        border-radius: 8px;
+        height: auto;
+        max-height: 300px;
+        max-width: 100%;
+        object-fit: contain;
+        transition: border 0.3s ease;
+    }
+
+    .info {
+        display: grid;
+        grid-auto-rows: min-content;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3xs);
+        margin-bottom: var(--space-2xs);
+        transition: color 0.3s ease;
+
+        .external-arrow svg{
+            height: 16px;
+            width: 16px;
+            transition: fill 0.3s ease, transform 0.3s ease;
+        }
+    }
+
+    .description {
+        margin-bottom: var(--space-m);
+    }
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2xs);
+    }
+}
