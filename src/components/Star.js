@@ -18,16 +18,16 @@ const BubbleStar = ({ top, left, canShoot, shootDirection }) => {
   }, [canShoot]);
 
   const starStyle = {
+    alignItems: 'center',
     borderRadius: '50%',
+    cursor: `${canShoot ? 'pointer' : 'default'}`,
+    display: 'flex',
+    height: '7px',
+    justifyContent: 'center',
+    left: `${left}%`,
     position: 'absolute',
     top: `${top}%`,
-    left: `${left}%`,
-    width: '5px',
-    height: '5px',
-    cursor: 'pointer',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: '7px',
   };
 
   const starInnerStyle = {
