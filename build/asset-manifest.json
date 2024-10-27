@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.b01626e1.css",
-    "main.js": "/static/js/main.d9e57ce0.js",
+    "main.css": "/static/css/main.ac9f1d32.css",
+    "main.js": "/static/js/main.fd882e95.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
-    "static/media/listening-sessions.png": "/static/media/listening-sessions.46b91856a53d2b867f34.png",
-    "static/media/disney.png": "/static/media/disney.0b27574e187667504542.png",
+    "static/media/listening-sessions.png": "/static/media/listening-sessions.cf6eb9a5f7d3e72593ef.png",
+    "static/media/disney.png": "/static/media/disney.becc01c9713b829b4b55.png",
     "static/media/ybos.png": "/static/media/ybos.6bbcd26aabb8ee56f863.png",
     "index.html": "/index.html",
     "static/media/github.svg": "/static/media/github.2f014d56f221a113698e10122128b1cd.svg",
@@ -12,12 +12,12 @@
     "static/media/link.svg": "/static/media/link.a3f062248e20d6e9ca19d7ca06187438.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.9836ba3d8ec19ec3b2045e296f33fb44.svg",
     "static/media/gmail.svg": "/static/media/gmail.6f6aa68698b4a3da9acc020caa3f3975.svg",
-    "main.b01626e1.css.map": "/static/css/main.b01626e1.css.map",
-    "main.d9e57ce0.js.map": "/static/js/main.d9e57ce0.js.map",
+    "main.ac9f1d32.css.map": "/static/css/main.ac9f1d32.css.map",
+    "main.fd882e95.js.map": "/static/js/main.fd882e95.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b01626e1.css",
-    "static/js/main.d9e57ce0.js"
+    "static/css/main.ac9f1d32.css",
+    "static/js/main.fd882e95.js"
   ]
 }
