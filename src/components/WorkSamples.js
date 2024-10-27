@@ -9,7 +9,7 @@ const data = [
     {
         image: ybosImage,
         title: 'Nike SB React App',
-        description: 'Built a comic book reader that focuses on mental health in sports.',
+        description: 'For NikeSB I built a comic book reader with React and Remix that focuses on mental health in sports. This is a reusable component that uses Craft CMS for the content.',
         skills: ['React', 'Remix', 'Craft CMS', 'Sass'],
         link: 'https://ybos.nikesb.com/ybos-running'
     },
@@ -23,7 +23,7 @@ const data = [
     {
         image: disneyImage,
         title: 'Disney Impact',
-        description: 'A component driven website buit with WordPress and good ole plain javaScript.',
+        description: 'A component driven website built with WordPress and good ol plain javaScript.',
         skills: ['WordPress', 'JavaScript', 'PHP', 'Sass'],
         link: 'https://impact.disney.com'
     }
