@@ -63,7 +63,7 @@ const NavLink = ({ href, text }) => {
         };
     }, [href, setActiveHref]);
 
-    const isActive = activeHref === href;
+    const isActive = activeHref === href && isVisible;
 
     return (
         <a href={href} className={`nav-link ${isActive ? 'active' : ''}`} onClick={handleClick}>{text}</a>

@@ -10,7 +10,6 @@ const ExperienceItem = ({
   description, 
   links, 
   skills,
-  isHovered,
   isDimmed,
   onMouseEnter,
   onMouseLeave

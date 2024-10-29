@@ -61,10 +61,9 @@ const Experience = () => {
                     description={item.description}
                     links={item.links}
                     skills={item.skills}
-                    isHovered={hoveredIndex === index}
                     isDimmed={hoveredIndex !== null && hoveredIndex !== index}
                     onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}  
+                    onMouseLeave={() => setHoveredIndex(null)}
                 />
             ))}
         </section>
