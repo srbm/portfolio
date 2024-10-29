@@ -1,4 +1,5 @@
 This is the portfolio website for Shawn Meyer, a web developer.
+[See it live](https://shawnrbmeyer.com)
 
 ## Technologies Used
 
