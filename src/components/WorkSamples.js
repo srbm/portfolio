@@ -5,6 +5,7 @@ import ybosImage from '../assets/ybos.png';
 import richardsonImage from '../assets/richardson.png';
 import listeningSessionsImage from '../assets/listening-sessions.png';
 import disneyImage from '../assets/disney.png';
+import lamPartners from '../assets/lam-partners.png';
 
 const data = [
     {
@@ -33,6 +34,13 @@ const data = [
         description: 'A component driven website built with WordPress and good ol plain javaScript.',
         skills: ['WordPress', 'JavaScript', 'PHP', 'Sass'],
         link: 'https://impact.disney.com'
+    },
+    {
+        image: lamPartners,
+        title: 'Lam Partners',
+        description: 'Creating a clean content entry system while bucking the WordPress look on the frontend were the two keys to success on this project. I worked closely with the designer to pinpoint where we needed custom blocks and together we made use of our custom theme\'s settings and CSS to really make this site pop.',
+        skills: ['Wordpress', 'Custom blocks', 'JavaScript', 'CSS'],
+        link: 'https://lampartners.com'
     }
 ]
 
