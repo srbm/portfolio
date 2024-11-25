@@ -3,9 +3,13 @@ import '../styles/components/WorkSamples.css';
 import WorkSample from './WorkSample';
 import ybosImage from '../assets/ybos.png';
 import richardsonImage from '../assets/richardson.png';
+import richardsonImageMobile from '../assets/richardson-mobile.png';
 import listeningSessionsImage from '../assets/listening-sessions.png';
+import listeningSessionsImageMobile from '../assets/listening-sessions-mobile.png';
 import disneyImage from '../assets/disney.png';
+import disneyImageMobile from '../assets/disney-impact-mobile.png';
 import lamPartners from '../assets/lam-partners.png';
+import lamPartnersMobile from '../assets/lam-mobile.png';
 
 const data = [
     {
@@ -17,12 +21,14 @@ const data = [
     },
     {
         image: richardsonImage,
+        mobileImage: richardsonImageMobile,
         title: 'Richardson Sports',
         description: 'In this massive redesign I was resopnsible for implementing the new product description page. It required using api calls to get the product data, keeping load times fast for the style images and the potiential for multiple modals, sliders and accordions.',
         skills: ['JavaScript', 'CSS', 'APIs'],
     },
     {
         image: listeningSessionsImage,
+        mobileImage: listeningSessionsImageMobile,
         title: 'Listening Sessions',
         description: 'This project has a bespoke navigation that immerses the user in the experience of refugee women settling in the US.',
         skills: ['React', 'Gatsby', 'GraphQL', 'Sass'],
@@ -30,6 +36,7 @@ const data = [
     },
     {
         image: disneyImage,
+        mobileImage: disneyImageMobile,
         title: 'Disney Impact',
         description: 'A component driven website built with WordPress and good ol plain javaScript.',
         skills: ['WordPress', 'JavaScript', 'PHP', 'Sass'],
@@ -37,6 +44,7 @@ const data = [
     },
     {
         image: lamPartners,
+        mobileImage: lamPartnersMobile,
         title: 'Lam Partners',
         description: 'Creating a clean content entry system while bucking the WordPress look on the frontend were the two keys to success on this project. I worked closely with the designer to pinpoint where we needed custom blocks and together we made use of our custom theme\'s settings and CSS to really make this site pop.',
         skills: ['Wordpress', 'Custom blocks', 'JavaScript', 'CSS'],
@@ -55,6 +63,7 @@ const WorkSamples = () => {
                     <WorkSample
                         key={index}
                         image={project.image}
+                        mobileImage={project.mobileImage ?? project.image}
                         title={project.title}
                         description={project.description}
                         skills={project.skills}

@@ -1,8 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import '../styles/components/WorkSample.css';
 import { ReactComponent as ExternalArrow } from '../assets/icons/external-arrow.svg';
 
-const WorkSample = ({ image, title, description, skills, link, isDimmed, onMouseEnter, onMouseLeave }) => {
+const WorkSample = ({ image, mobileImage, title, description, skills, link, isDimmed, onMouseEnter, onMouseLeave }) => {
+    const [imageSrc, setImageSrc] = useState(
+        window.innerWidth  > 768 ? image : mobileImage
+    );
+
+    const updateImageSrc = () => {
+        const newImageSrc = window.innerWidth > 768 ? image : mobileImage;
+        setImageSrc(newImageSrc);
+      };
+    
+      useEffect(() => {
+        window.addEventListener('resize', updateImageSrc);
+    
+        return () => {
+          window.removeEventListener('resize', updateImageSrc);
+        };
+      }, []);
+
     return (
         link ? (
             <a
@@ -11,7 +28,7 @@ const WorkSample = ({ image, title, description, skills, link, isDimmed, onMouse
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <img src={image} alt={title} className='image' />
+                <img src={imageSrc} alt={title} className='image' />
                 <div className='info'>
                     <h3 className='title ibm-semibold'>
                         {title} <span className="external-arrow"><ExternalArrow /></span>
@@ -31,7 +48,7 @@ const WorkSample = ({ image, title, description, skills, link, isDimmed, onMouse
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <img src={image} alt={title} className='image' />
+                <img src={imageSrc} alt={title} className='image' />
                 <div className='info'>
                     <h3 className='title ibm-semibold'>{title}</h3>
                     <p className='description ibm-light'>{description}</p>

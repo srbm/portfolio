@@ -29,5 +29,6 @@ header.header {
     }
     .contact-section {
         align-self: end;
+        padding: 2px;
     }
 }
