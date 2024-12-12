@@ -3,6 +3,9 @@ header.header {
     grid-template-rows: auto 1fr;
     grid-gap: var(--space-m);
     padding: var(--header-padding) 0;
+    height: 100vh;
+    position: sticky;
+    top: 0;
     
     @media screen and (min-width: 768px) {
         grid-gap: var(--space-2xl);

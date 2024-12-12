@@ -12,12 +12,6 @@
         grid-template-columns: 2fr 3fr;
     }
 
-    .layout > *:first-child {
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
     .layout > *:last-child {
         overflow-y: auto;
     }
