@@ -1,8 +1,52 @@
-.moonphase {
-    align-items: center;
-    display: grid;
-    justify-content: right;
+.moon-container {
     grid-column: 2;
     grid-row: 1;
+    justify-self: right;
+    margin-top: 15px;
+    margin-right: -50px;
+}
+
+.sphere {
+    border-radius: 100%;
+    width: 100px;
     height: 100px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+}
+
+.hemisphere {
+    width: 50%;
+    height: 100%;
+}
+
+.light {
+    background-color: #F4F6F0;
+}
+
+.dark {
+    background-color: #575851;
+}
+
+.divider,
+.divider:after {
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.divider {
+    background-color: #575851;
+}
+
+.divider:after {
+    content: '';
+    background-color: #F4F6F0;
+    transform: rotateY(180deg);
 }
