@@ -7,6 +7,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Experience from './components/Experience';
 import WorkSamples from './components/WorkSamples'; 
+import MoonPhase from './components/Moon';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <StarryBackground />
       
         <Layout>
+          <MoonPhase />
           <Header />
 
           <main>
