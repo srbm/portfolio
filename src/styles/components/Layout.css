@@ -1,8 +1,7 @@
 .layout {
     display: grid;
-    grid-template-areas: 'moon' 'header' 'main';
+    grid-template-areas: 'header' 'moon' 'main';
     grid-template-columns: 1fr;
-    gap: var(--space-s);
     position: relative;
     z-index: 1;
 }
