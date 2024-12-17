@@ -3,11 +3,13 @@ header.header {
     grid-area: header;
     grid-template-rows: auto 1fr;
     grid-gap: var(--space-m);
+    padding-bottom: 60px;
     
     @media screen and (min-width: 1024px) {
         grid-gap: var(--space-2xl);
         grid-template-rows: auto auto 1fr;
-        height: 100vh;
+        height: calc(100vh - var(--header-padding));
+        padding-bottom: 120px;
         position: sticky;
         top: var(--header-padding);
     }
