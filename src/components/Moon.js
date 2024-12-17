@@ -64,14 +64,18 @@ const MoonPhase = () => {
 
   // Display the moon phase image
   return (
-    <div className="moon-container">
+    <a href='https://moon.nasa.gov/moon-observation/daily-moon-guide/?intent=011#moon_section'
+        className="moon-container"
+        target='_blank'
+        rel='noreferrer'
+    >
       <div className="sphere">
         <div className={`hemisphere ${leftHemiClass}`}></div>
         <div className={`hemisphere ${rightHemiClass}`}></div>
         <div className="divider" style={dividerRotation}></div>
       </div>
         {/* <img src='https://www.pennlive.com/resizer/dp_dvs4Zo8pljrfn2kUqoERJ90M=/800x0/smart/image.pennlive.com/home/penn-media/width600/img/wildaboutpa/photo/14-blue-moonjpg-e541a63d92f2ed42.jpg' alt='moon' /> */}
-    </div>
+    </a>
   );
 };
 

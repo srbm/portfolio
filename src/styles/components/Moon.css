@@ -1,9 +1,12 @@
 .moon-container {
-    grid-column: 2;
-    grid-row: 1;
+    grid-area: moon;
     justify-self: right;
-    margin-top: 15px;
-    margin-right: -50px;
+    @media screen and (min-width: 1024px) {
+        position: sticky;
+        justify-self: unset;
+        top: 100px;
+    }
+
 }
 
 .sphere {
@@ -22,11 +25,11 @@
 }
 
 .light {
-    background-color: #F4F6F0;
+    background-color: var(--moon-light);
 }
 
 .dark {
-    background-color: #575851;
+    background-color: var(--moon-dark);
 }
 
 .divider,
@@ -42,11 +45,11 @@
 }
 
 .divider {
-    background-color: #575851;
+    background-color: var(--moon-dark);
 }
 
 .divider:after {
     content: '';
-    background-color: #F4F6F0;
+    background-color: var(--moon-light);
     transform: rotateY(180deg);
 }
