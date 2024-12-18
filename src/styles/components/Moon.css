@@ -1,10 +1,9 @@
 .moon-container {
     grid-area: moon;
     justify-self: right;
+    position: relative;
     @media screen and (min-width: 1024px) {
-        position: sticky;
         justify-self: unset;
-        top: 100px;
     }
 
 }
@@ -52,4 +51,39 @@
     content: '';
     background-color: var(--moon-light);
     transform: rotateY(180deg);
+}
+
+.crater {
+    background-color: #94908D;
+    border-radius: 50%;
+    position: absolute;
+}
+.crater-1 {
+    height:20px;
+    right: 10px;
+    width: 20px;
+}
+.crater-2 {
+    bottom: 10px;
+    height: 40px;
+    right: 25px;
+    width: 40px;
+}
+.crater-3 {
+    top: 10px;
+    height: 10px;
+    left: 25px;
+    width: 10px;
+}
+.crater-4 {
+    top: 15px;
+    height: 15px;
+    left: 15px;
+    width: 15px;
+}
+.crater-5 {
+    top: 22px;
+    height: 12px;
+    left: 33px;
+    width: 12px;
 }
