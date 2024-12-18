@@ -73,6 +73,11 @@ const MoonPhase = () => {
         <div className={`hemisphere ${leftHemiClass}`}></div>
         <div className={`hemisphere ${rightHemiClass}`}></div>
         <div className="divider" style={dividerRotation}></div>
+        <span className='crater crater-1'></span>
+        <span className='crater crater-2'></span>
+        <span className='crater crater-3'></span>
+        <span className='crater crater-4'></span>
+        <span className='crater crater-5'></span>
       </div>
         {/* <img src='https://www.pennlive.com/resizer/dp_dvs4Zo8pljrfn2kUqoERJ90M=/800x0/smart/image.pennlive.com/home/penn-media/width600/img/wildaboutpa/photo/14-blue-moonjpg-e541a63d92f2ed42.jpg' alt='moon' /> */}
     </a>
