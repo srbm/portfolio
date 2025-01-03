@@ -23,7 +23,7 @@ const data = [
         image: richardsonImage,
         mobileImage: richardsonImageMobile,
         title: 'Richardson Sports',
-        description: 'In this massive redesign I was resopnsible for implementing the new product description page. It required using api calls to get the product data, keeping load times fast for the style images and the potiential for multiple modals, sliders and accordions.',
+        description: 'In this massive redesign I was responsible for implementing the new product description page. It required using api calls to get the product data, keeping load times fast for the style images and the potiential for multiple modals, sliders and accordions.',
         skills: ['JavaScript', 'CSS', 'APIs'],
     },
     {
