@@ -1,29 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/components/Moon.css';
 
-const MOON_ENDPOINT = 'https://api.stormglass.io/v2/astronomy/point';
-const API_KEY = process.env.REACT_APP_STORM_GLASS;
+const SERVER_ENDPOINT = 'https://shawnrbmeyer.com/moon_phase_data.json';
 const headers = {
     'Content-Type': 'application/json',
-    "X-Requested-With": "XMLHttpRequest",
-    'Authorization': API_KEY
+    "X-Requested-With": "XMLHttpRequest"
 };
-
-const date = new Date();
-const end = date.toISOString().split('T')[0]; // 'YYYY-MM-DD'
-// My approximate location
-const lat = 45.3;
-const lng = 122.3;
 
 const fetchMoonPhase = async () => {
   try {
-    const response = await fetch(`https://api.stormglass.io/v2/astronomy/point?lat=${lat}&lng=${lng}&end=${end}`, {
-      headers
-    });
-    return response;
-
+    return await fetch(SERVER_ENDPOINT, {headers});
   } catch (error) {
-    console.error('Error fetching moon phase:', error);
+    console.error('Error fetching moon phase from server json file:', error);
     return null;
   }
 
@@ -46,7 +34,7 @@ const MoonPhase = () => {
                 throw new Error('Failed to fetch moon phase: ' + response.status);
               }
           } catch (error) {
-              console.error('Error fetching the moon phase. Here\'s a random moon', error);
+              console.error('Error fetching the moon phase. Here\'s a random moon.', error);
               const phase = Math.random() * 360;
               setMoonPhase(phase);
           }
