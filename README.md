@@ -19,3 +19,7 @@ Deploy
 1. Run `npm run build`
 2. The files in the `build` folder are the static files for the website
 3. Upload the files to the web server
+4. Move `fetch_moon_phase.php` to your root
+5. Set up a cron job to run the php script every 4 hours
+  -  This creates the json file that the app will call to get moon data.
+
