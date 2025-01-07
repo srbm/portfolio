@@ -21,27 +21,31 @@ const fetchMoonPhase = async () => {
 const getBorderStyles = (moonPhase) => {
   const maxBorderWidth = 50;
   let borderLeft, borderRight;
-  
+
+  // Ensure moonPhase wraps correctly if outside 0-1 range
+  moonPhase = moonPhase % 1;
+  moonPhase = moonPhase < 0 ? moonPhase + 1 : moonPhase;
+
   if (moonPhase >= 0 && moonPhase < 0.25) {
     // New Moon to First Quarter phase
-    borderLeft = `${maxBorderWidth * moonPhase * 4}px solid #fff`;
-    borderRight = `${maxBorderWidth * (1 - moonPhase * 4)}px solid #0c1c2e`;
+    borderLeft = `${maxBorderWidth * moonPhase * 4}px solid #0c1c2e`;
+    borderRight = `${maxBorderWidth * (1 - moonPhase * 4)}px solid #fff`;
   } else if (moonPhase >= 0.25 && moonPhase < 0.5) {
     // First Quarter to Full Moon phase
-    let phaseAdjusted = (moonPhase - 0.25) * 4;
-    borderLeft = `${maxBorderWidth * (1 - phaseAdjusted)}px solid #fff`;
-    borderRight = `${maxBorderWidth * phaseAdjusted}px solid #0c1c2e`;
+    borderLeft = `${maxBorderWidth}px solid #fff`;
+    borderRight = `${maxBorderWidth}px solid #fff`;
   } else if (moonPhase >= 0.5 && moonPhase < 0.75) {
     // Full Moon to Last Quarter phase
     let phaseAdjusted = (moonPhase - 0.5) * 4;
-    borderLeft = `${maxBorderWidth * phaseAdjusted}px solid #fff`;
-    borderRight = `${maxBorderWidth * (1 - phaseAdjusted)}px solid #0c1c2e`;
-  } else if (moonPhase >= 0.75 && moonPhase <= 1) {
+    borderLeft = `${maxBorderWidth * (1 - phaseAdjusted)}px solid #fff`;
+    borderRight = `${maxBorderWidth * phaseAdjusted}px solid #0c1c2e`;
+  } else {
     // Last Quarter to New Moon phase
     let phaseAdjusted = (moonPhase - 0.75) * 4;
-    borderLeft = `${maxBorderWidth * (1 - phaseAdjusted)}px solid #0c1c2e`;
-    borderRight = `${maxBorderWidth * phaseAdjusted}px solid #fff`;
+    borderLeft = `${maxBorderWidth * phaseAdjusted}px solid #0c1c2e`;
+    borderRight = `${maxBorderWidth * (1 - phaseAdjusted)}px solid #fff`;
   }
+
   console.log({ borderLeft, borderRight });
 
   return { borderLeft, borderRight };
@@ -79,15 +83,11 @@ const MoonPhase = () => {
   // Call getBorderStyles after moonPhase is set
   useEffect(() => {
     if (moonPhase !== null) {
-        const { borderLeft, borderRight } = getBorderStyles(moonPhase); // Assuming getBorderStyles is defined elsewhere
-        console.log({ borderLeft, borderRight });
+        const { borderLeft, borderRight } = getBorderStyles(moonPhase);
         setBorderStyles({ borderLeft, borderRight });
     }
 }, [moonPhase]);
-
-console.log(moonPhase);
   
-  console.log(borderStyles);
   const style = {
     borderLeft: borderStyles.borderLeft,
     borderRight: borderStyles.borderRight,
