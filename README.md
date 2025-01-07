@@ -23,3 +23,6 @@ Deploy
 5. Set up a cron job to run the php script every 4 hours
   -  This creates the json file that the app will call to get moon data.
 
+Alternative Deploy
+1. Run the deploy.sh script from the home folder.
+  - This script presumes both you temp folder and your web root folder are in your home folder.
