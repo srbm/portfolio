@@ -20,33 +20,41 @@ const fetchMoonPhase = async () => {
 
 const getBorderStyles = (moonPhase) => {
   const maxBorderWidth = 50;
+  const darkColor = '#0c1c2e'; // Color representing the shadow
+  const lightColor = '#fff';    // Color representing the illuminated part
   let borderLeft, borderRight;
 
-  // Ensure moonPhase wraps correctly if outside 0-1 range
+  // Normalize moonPhase to the range of 0 to 1
   moonPhase = moonPhase % 1;
   moonPhase = moonPhase < 0 ? moonPhase + 1 : moonPhase;
 
-  if (moonPhase >= 0 && moonPhase < 0.25) {
-    // New Moon to First Quarter phase
-    borderLeft = `${maxBorderWidth * moonPhase * 4}px solid #0c1c2e`;
-    borderRight = `${maxBorderWidth * (1 - moonPhase * 4)}px solid #fff`;
-  } else if (moonPhase >= 0.25 && moonPhase < 0.5) {
-    // First Quarter to Full Moon phase
-    borderLeft = `${maxBorderWidth}px solid #fff`;
-    borderRight = `${maxBorderWidth}px solid #fff`;
-  } else if (moonPhase >= 0.5 && moonPhase < 0.75) {
-    // Full Moon to Last Quarter phase
-    let phaseAdjusted = (moonPhase - 0.5) * 4;
-    borderLeft = `${maxBorderWidth * (1 - phaseAdjusted)}px solid #fff`;
-    borderRight = `${maxBorderWidth * phaseAdjusted}px solid #0c1c2e`;
-  } else {
-    // Last Quarter to New Moon phase
-    let phaseAdjusted = (moonPhase - 0.75) * 4;
-    borderLeft = `${maxBorderWidth * phaseAdjusted}px solid #0c1c2e`;
-    borderRight = `${maxBorderWidth * (1 - phaseAdjusted)}px solid #fff`;
+  // New Moon to First Quarter (0-0.25). Waxing Crescent.
+  if (moonPhase <= 0.2499999) {
+    // The illuminated portion grows from right to left.
+    let visiblePortion = maxBorderWidth * (moonPhase / 0.25);
+    borderLeft = `${maxBorderWidth - visiblePortion}px solid ${darkColor}`;
+    borderRight = `${visiblePortion}px solid ${lightColor}`;
+  } 
+  // First Quarter to Full Moon (0.25-0.5). Waxing Gibbous.
+  else if (moonPhase >= 0.25 && moonPhase <= 0.5) {
+    let visiblePortion = maxBorderWidth * ((moonPhase - 0.25) / 0.25);
+    borderLeft = `${maxBorderWidth - visiblePortion}px solid ${darkColor}`;
+    borderRight = `${visiblePortion}px solid ${lightColor}`;
+  } 
+    // Full Moon to Last Quarter (0.5-0.75). Waning Gibbous.
+  else if (moonPhase > 0.5 && moonPhase < 0.75) {
+    // The shadow starts growing from the left.
+    let shadowPortion = maxBorderWidth * ((moonPhase - 0.5) / 0.25);
+    borderLeft = `${maxBorderWidth - shadowPortion}px solid ${lightColor}`;
+    borderRight = `${shadowPortion}px solid ${darkColor}`;
   }
-
-  console.log({ borderLeft, borderRight });
+  // Last Quarter to New Moon (0.75-1). Waning Crescent.
+  else {
+    // The illuminated portion diminishes from left to right.
+    let visiblePortion = maxBorderWidth * ((1 - moonPhase) / 0.25);
+    borderLeft = `${visiblePortion}px solid ${lightColor}`;
+    borderRight = `${maxBorderWidth - visiblePortion}px solid ${darkColor}`;
+  }
 
   return { borderLeft, borderRight };
 };
@@ -55,7 +63,7 @@ const getBorderStyles = (moonPhase) => {
 const MoonPhase = () => {
 
   const [moonPhase, setMoonPhase] = useState(null);
-  const [borderStyles, setBorderStyles] = useState({ borderLeft: '50px', borderRight: '0px' });
+  const [borderStyles, setBorderStyles] = useState({ borderLeft: '0px', borderRight: '50px' });
 
 
   useEffect(() => {
@@ -92,7 +100,7 @@ const MoonPhase = () => {
     borderLeft: borderStyles.borderLeft,
     borderRight: borderStyles.borderRight,
     backgroundColor: moonPhase >= 0.25 && moonPhase < 0.75 ? '#fff' : '#0c1c2e',
-    transform: moonPhase === 0.5 ? 'rotate(0deg)' : `rotate(${moonPhase < 0.5 ? -20 : 20}deg)`
+    transform: `rotate(${((moonPhase - 0.5) * 2 * 15) * -1}deg)`
   }
 
   // Display the moon phase image
@@ -107,7 +115,6 @@ const MoonPhase = () => {
         <div className="texture"></div>
         <div className="circle"></div>
       </div>
-        {/* <img src='https://www.pennlive.com/resizer/dp_dvs4Zo8pljrfn2kUqoERJ90M=/800x0/smart/image.pennlive.com/home/penn-media/width600/img/wildaboutpa/photo/14-blue-moonjpg-e541a63d92f2ed42.jpg' alt='moon' /> */}
     </a>
   );
 };
