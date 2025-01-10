@@ -8,6 +8,8 @@ import listeningSessionsImage from '../assets/listening-sessions.png';
 import listeningSessionsImageMobile from '../assets/listening-sessions-mobile.png';
 import disneyImage from '../assets/disney.png';
 import disneyImageMobile from '../assets/disney-impact-mobile.png';
+import malarkeyImage from '../assets/malarkey.png';
+import malarkeyMobileMobile from '../assets/malarkey-mobile.png';
 import lamPartners from '../assets/lam-partners.png';
 import lamPartnersMobile from '../assets/lam-mobile.png';
 
@@ -41,6 +43,14 @@ const data = [
         description: 'A component driven website built with WordPress and good ol plain javaScript.',
         skills: ['WordPress', 'JavaScript', 'PHP', 'Sass'],
         link: 'https://impact.disney.com'
+    },
+    {
+        image: malarkeyImage,
+        mobileImage: malarkeyMobileMobile,
+        title: 'Malarky Roofing',
+        description: 'Using WordPress and ACF, Malarkey Roofing uses PHP templatees for the frontend and JavaScript to incorporate the functionality. On this specific page the user fills out a form, that when submitted, gives sustainability stats and is used to generate PDF certificates and images for social media posts.',
+        skills: ['WordPress', 'JavaScript', 'PHP', 'PDF generation'],
+        link: 'https://www.malarkeyroofing.com/sustainability-calculator/'
     },
     {
         image: lamPartners,
