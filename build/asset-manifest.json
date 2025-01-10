@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d2ff59cf.css",
-    "main.js": "/static/js/main.89429999.js",
+    "main.js": "/static/js/main.72d86ac0.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/listening-sessions.png": "/static/media/listening-sessions.cf6eb9a5f7d3e72593ef.png",
     "static/media/disney.png": "/static/media/disney.becc01c9713b829b4b55.png",
@@ -12,7 +12,9 @@
     "static/media/listening-sessions-mobile.png": "/static/media/listening-sessions-mobile.7ffe09a4bf507587cc6c.png",
     "static/media/real-moon.png": "/static/media/real-moon.b0d0574c81fb3551fa53.png",
     "static/media/disney-impact-mobile.png": "/static/media/disney-impact-mobile.5fc841b5a06855746c6b.png",
+    "static/media/malarkey.png": "/static/media/malarkey.0978333b2c0d6904af87.png",
     "static/media/richardson-mobile.png": "/static/media/richardson-mobile.859dc4667f68e84c022b.png",
+    "static/media/malarkey-mobile.png": "/static/media/malarkey-mobile.001a9489ceaa2747a290.png",
     "index.html": "/index.html",
     "static/media/github.svg": "/static/media/github.2f014d56f221a113698e10122128b1cd.svg",
     "static/media/external-arrow.svg": "/static/media/external-arrow.986d96632545ef88a66f834b9684249f.svg",
@@ -20,11 +22,11 @@
     "static/media/linkedin.svg": "/static/media/linkedin.9836ba3d8ec19ec3b2045e296f33fb44.svg",
     "static/media/gmail.svg": "/static/media/gmail.6f6aa68698b4a3da9acc020caa3f3975.svg",
     "main.d2ff59cf.css.map": "/static/css/main.d2ff59cf.css.map",
-    "main.89429999.js.map": "/static/js/main.89429999.js.map",
+    "main.72d86ac0.js.map": "/static/js/main.72d86ac0.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d2ff59cf.css",
-    "static/js/main.89429999.js"
+    "static/js/main.72d86ac0.js"
   ]
 }
