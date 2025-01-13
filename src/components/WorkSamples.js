@@ -47,7 +47,7 @@ const data = [
     {
         image: malarkeyImage,
         mobileImage: malarkeyMobileMobile,
-        title: 'Malarky Roofing',
+        title: 'Malarkey Roofing',
         description: 'Using WordPress and ACF, Malarkey Roofing uses PHP templatees for the frontend and JavaScript to incorporate the functionality. On this specific page the user fills out a form, that when submitted, gives sustainability stats and is used to generate PDF certificates and images for social media posts.',
         skills: ['WordPress', 'JavaScript', 'PHP', 'PDF generation'],
         link: 'https://www.malarkeyroofing.com/sustainability-calculator/'
