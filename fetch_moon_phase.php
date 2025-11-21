@@ -2,8 +2,8 @@
 // This file is placed in the root folder of your project.
 // Update the path for the json file accordingly.
 
-function fetchMoonPhase($apiKey, $lat, $lng, $end) {
-    $url = "https://api.stormglass.io/v2/astronomy/point?lat=$lat&lng=$lng&end=$end";
+function fetchMoonPhase($apiKey, $lat, $lng, $start) {
+    $url = "https://api.stormglass.io/v2/astronomy/point?lat=$lat&lng=$lng&start=$start";
 
     $curl = curl_init($url);
 
@@ -29,16 +29,16 @@ function fetchMoonPhase($apiKey, $lat, $lng, $end) {
 }
 
 $date = new DateTime();
-$end = $date->format('Y-m-d');
+$start = $date->format('Y-m-d');
 $lat = 45.3;
 $lng = 122.3;
 $apiKey = 'KEY'; // Stormglass API key https://dashboard.stormglass.io/
 
-$moonPhaseData = fetchMoonPhase($apiKey, $lat, $lng, $end);
+$moonPhaseData = fetchMoonPhase($apiKey, $lat, $lng, $start);
 
 if ($moonPhaseData !== null) {
     file_put_contents('/home/lexidqvm/shawnrbmeyer.com/moon_phase_data.json', $moonPhaseData);
 } else {
-    echo "Failed to fetch moon phase data.";
+    error_log("Failed to fetch moon phase data.");
 }
 ?>
