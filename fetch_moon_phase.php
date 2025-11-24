@@ -11,7 +11,7 @@ function fetchMoonPhase($apiKey, $lat, $lng, $start, $end) {
     curl_setopt($curl, CURLOPT_HTTPHEADER, [
         'Content-Type: application/json',
         'X-Requested-With: XMLHttpRequest',
-        'Authorization: ' . $apiKey
+        'Authorization: e4605b76-b8da-11ef-8d8d-0242ac130003-e4605be4-b8da-11ef-8d8d-0242ac130003'
     ]);
 
     $response = curl_exec($curl);

@@ -4,6 +4,17 @@ import ExperienceItem from './ExperienceItem';
 
 const experienceData = [
   {
+    date: 'Feb 2025 - Present',
+    titleCompany: 'Web Developer, Motionstrand',
+    companyLink: 'https://motionstrand.com/',
+    description: 'Successfully deliver 6+ concurrent development projects, often with weekly turnarounds. I proactively modernize existing codebases with rigorous debugging that significantly enhances maintainability for future development cycles.',
+    links: [
+      { text: 'Defitelio', url: 'https://defitelio.com/about-defitelio/mechanism-of-action' },
+      { text: 'Xdemvy', url: 'https://xdemvy.com/' }
+    ],
+    skills: ['Drupal', 'PHP', 'JavaScript', 'HTML', 'CSS', 'Figma']
+  },
+  {
     date: 'Nov 2019 - Sept 2024',
     titleCompany: 'Web Developer II, Owen Jones and Partners',
     companyLink: 'https://whoisowenjones.com/',
